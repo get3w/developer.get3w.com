@@ -1,0 +1,87 @@
+---
+---
+
+$green: green;
+.docs-section {
+  font-family: Helvetica;
+  h1,
+  h2,
+  h3 {
+    line-height: 2rem;
+    padding: 7px 0;
+    margin: 10px 0;
+    border-bottom: solid 1px #f1f1f1;
+    .links {
+      opacity: 0;
+    }
+    &:hover {
+      color: $green;
+      .links {
+        opacity: 1;
+      }
+    }
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  h4 + ul {
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    display: block;
+    line-height: 1.6;
+    li {
+      list-style: initial;
+      line-height: 1.5;
+      padding: 5px;
+      font-size: 1rem;
+    }
+  }
+  .ct-alert {
+    & > .inner {
+      position: relative;
+      i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -15px;
+        display: block;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 25px;
+      }
+      .content {
+        padding-left: 50px;
+      }
+    }
+  }
+  code.option,
+  th .option,
+  code.filter,
+  th .filter {
+    color: rgb(80, 182, 0);
+  }
+  code.flag,
+  th .flag,
+  code.output,
+  th .output {
+    color: rgb(4, 157, 206);
+  }
+}
+.ct-table-wrapper {
+  p {
+    margin: 0 !important;
+    line-height: inherit;
+  }
+}

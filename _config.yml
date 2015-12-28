@@ -1,0 +1,22 @@
+name: Alpha
+description: Get3w Documentions
+baseurl: ''
+# baseurl: 'http://docs.get3w.net'
+url: ''
+highlight: pygments
+disqus: get3wcom
+
+# Dependencies
+markdown:         redcarpet
+
+# Permalinks
+permalink:        /:title
+
+exclude: ['Rakefile','.gitignore']
+
+# # PAGINATION
+# gems: [jekyll-paginate]
+# paginate: 5
+# paginate_path: "page:num"
+repository: https://github.com/get3w/get3w
+help_url: https://github.com/get3w/get3w-help

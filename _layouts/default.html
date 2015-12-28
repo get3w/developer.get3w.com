@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viert" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}{% if post.title %} {{ page.title }} {% endif %}</title>
+    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/animate.css/3.4.0/animate.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/ct.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/docs.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/pygments.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/layout.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--header code -->
+    {% include header.html %}
+    <!--docs code-->
+    <section class="docs">
+        <div class="ct-container">
+            <div class="ct-row">
+                <!--left code-->
+                <div class="ct-md-3 sidebar-nav border-right">
+                    {% include nav.html %}
+                </div>
+                <!--right code-->
+                <div class="ct-md-9">
+                    <div class="docs-content">
+                        <div class="docs-header">
+                            <nav class="ct-fr suggest">
+                                <a href="#disqus"><i class="fa fa-pencil"></i> Suggest Edits
+</a>
+                            </nav>
+                            <h1>{{ page.title }}</h1>
+                            <hr>
+                        </div>
+                        <div class="docs-section">
+                            {{ content }}
+                            <!-- <div class="ct-clearfix ct-mx">
+                              {% if page.previous %}
+                              <a class="ct-fl"  href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a>
+                              {% else %}
+                              <a class="ct-fl" href="#" disabled>&larr; Prev</a>
+                              {% endif %}
+                              {% if page.next %}
+                              <a class="ct-fr" href="{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
+                              {% else %}
+                              <a class="ct-fr" href="#" disabled>Next &rarr;</a>
+                              {% endif %}
+                            </div> -->
+                            <br>
+                            {% if page.disqus %}
+                              {% include disqus.html %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include footer.html %}
+</body>
+</html>

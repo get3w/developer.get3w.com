@@ -1,0 +1,37 @@
+<div class="lang-select">
+  <a class="lang" href="javascript:;">
+    <span>
+      {% if page.url contains '/en' %}
+        English
+        {% elsif page.url contains '/zh-tw' %}
+          正體中文
+        {% elsif page.url contains '/' %}
+        简体中文
+      {% endif %}
+      <i class="fa fa-caret-down"></i>
+    </span>
+  </a>
+  <ul class="dropdown-lang">
+    <li class="dropdown-header">
+      {% if page.url contains '/en' %}
+        Choose
+        {% else %}
+        选择语言
+      {% endif %}
+    </li>
+    <li class="divider"></li>
+    {% if page.url contains '/en' %}
+    <li class="cur"><a href="/en">English</a></li>
+    <li><a href="/">简体中文</a></li>
+    <li><a href="/zh-tw">正體中文</a></li>
+      {% elsif page.url contains '/zh-tw' %}
+      <li><a href="/en">English</a></li>
+      <li><a href="/">简体中文</a></li>
+      <li class="cur"><a href="/zh-tw">正體中文</a></li>
+      {% elsif page.url contains '/' %}
+      <li><a href="/en">English</a></li>
+      <li class="cur"><a href="/">简体中文</a></li>
+      <li><a href="/zh-tw">正體中文</a></li>
+    {% endif %}
+  </ul>
+</div>
