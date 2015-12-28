@@ -2,7 +2,7 @@ name: Alpha
 description: Get3w Documentions
 baseurl: '//get3w.github.io/developer.get3w.com/'
 # baseurl: 'http://docs.get3w.net'
-url: ''
+url: '//get3w.github.io/developer.get3w.com/'
 highlight: pygments
 disqus: get3wcom
 
