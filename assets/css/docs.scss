@@ -653,6 +653,9 @@ hr {
     .text-panel {
       padding: 15px;
       min-height: 150px;
+      .ct-h5 {
+        color: $green;
+      }
     }
   }
 }
